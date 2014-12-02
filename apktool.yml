@@ -1,0 +1,6 @@
+version: 1.4.3
+apkFileName: ºì¾¯4´ó¹úáÈÆð4.2.0.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1

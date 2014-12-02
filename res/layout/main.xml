@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    android:padding="10dp"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:background="#fff"
+            android:scaleType="fitCenter" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/layout1"
+        android:background="#eee" >
+
+        <TextView
+            android:id="@+id/ferther_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="5dp"
+            android:text="羽化(5):"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/gauss_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ferther_text"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="5dp"
+            android:text="降噪(20):"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/threshold_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/gauss_text"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="5dp"
+            android:text="阈值(0):"
+            android:textSize="16sp" />
+
+        <SeekBar
+            android:id="@+id/feather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ferther_text"
+            android:layout_toRightOf="@+id/ferther_text"
+            android:max="50"
+            android:progress="5" />
+
+        <SeekBar
+            android:id="@+id/gauss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/gauss_text"
+            android:layout_toRightOf="@+id/gauss_text"
+            android:max="50"
+            android:progress="20" />
+
+        <SeekBar
+            android:id="@+id/threshold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/threshold_text"
+            android:layout_toRightOf="@+id/threshold_text"
+            android:max="255" />
+
+        <Button
+            android:id="@+id/load"
+            android:layout_width="90dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/load"
+            android:text="加载图像" />
+
+        <Button
+            android:id="@+id/restore"
+            android:layout_width="90dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/restore"
+            android:text="还原图像" />
+
+        <Button
+            android:id="@+id/detect"
+            android:layout_width="90dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/detect"
+            android:text="检测图像" />
+    </RelativeLayout>
+
+</RelativeLayout>
